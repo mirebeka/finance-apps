@@ -1,0 +1,244 @@
+.mod-container {
+  display: grid;
+  grid-template-columns: 22.5rem minmax(0, 1fr);
+  gap: 1.3rem;
+  align-items: start;
+  justify-items: stretch;
+  padding: 1rem 1rem;
+  color: white;
+  min-height: 100vh;
+  box-sizing: border-box;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Left card (search) */
+.mod-search-card {
+  grid-column: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  background-color: #2c2c2c;
+  padding: 1rem 1rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  max-width: 22.5rem;
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+
+.mod-card-sub {
+  color: #e03b3b;
+  font-size: 0.95rem;
+}
+
+.mod-label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.mod-hint {
+  color: #aaa;
+  font-size: 0.8rem;
+  margin-top: 4px;
+}
+
+/* Right-hand list */
+.mod-list-card {
+  background-color: #2c2c2c;
+  padding: 1rem 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  max-width: 100%;
+  max-height: 90vh;
+  overflow: auto;
+}
+
+.mod-list-title {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #eaeaff;
+}
+
+.mod-count {
+  min-width: 1.8rem;
+  padding: 2px 8px;
+  border-radius: 9999px;
+  font-weight: 700;
+  text-align: center;
+  background: #444;
+  color: #fff;
+}
+
+.mod-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.mod-table th,
+.mod-table td {
+  text-align: left;
+  padding: 0.6rem 0.8rem;
+  border-bottom: 0.06rem solid #3b3b3b;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  line-height: 1;
+}
+
+.mod-table th {
+  top: 0;
+  background: #2f2f2f;
+  z-index: 1;
+}
+
+.mod-row {
+  cursor: pointer;
+}
+
+.mod-row:hover {
+  background: #3a3a3a;
+}
+
+.muted {
+  color: #bbb;
+}
+
+
+.mod-action-btn {
+  padding: 0.2rem 0.8rem;
+  border: 1px solid #565656;
+  border-radius: 14px;
+  background: #2f2f2f;
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background .15s ease, transform .05s ease;
+}
+.mod-action-btn:hover { background: #3a3a3a; }
+.mod-action-btn:active { transform: translateY(1px); }
+
+.mod-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: rgba(0,0,0,0.35);
+  z-index: 9999;
+  backdrop-filter: blur(2px);
+
+
+}
+.mod-modal {
+  width: min(720px, 92vw);
+  background: #2c2c2c;
+  color: #fff;
+  border-radius: 12px;
+  border: 1px solid #3a3a3a;
+  box-shadow: 0 10px 30px rgba(0,0,0,.4);
+}
+.mod-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 16px;
+  border-bottom: 1px solid #3b3b3b;
+}
+.mod-modal-close {
+  background: transparent;
+  color: #ddd;
+  border: 0;
+  font-size: 22px;
+  cursor: pointer;
+}
+.mod-modal-close:hover { color: #fff; }
+.mod-modal-body {
+   padding: 1rem;
+   max-height: 60vh;
+   overflow-y: auto;
+  scrollbar-width: none; 
+} 
+
+.mod-modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  padding: 12px 16px 16px;
+  border-top: 1px solid #3b3b3b;
+}
+.mod-btn-primary,
+.mod-btn-secondary {
+  padding: 8px 18px;
+  border-radius: 16px;
+  font-weight: 700;
+  border: 0;
+  cursor: pointer;
+}
+.mod-btn-primary { background: #646cff; color: #fff; }
+.mod-btn-primary:hover { background: #4a4fe0; }
+.mod-btn-secondary { background: #3a3a3a; color: #fff; border: 1px solid #565656; }
+.mod-btn-secondary:hover { background: #2f2f2f; border-color: #7a7a7a; }
+
+
+/* modal form inputs */
+.mod-label {
+   display: inline-flex;
+   flex-direction: column;
+   gap: 0.3rem; 
+   color: #fff;    
+  }
+
+.mod-input, .mod-textarea, .mod-select {
+  margin-top: 4px;
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid #3c3c3c;
+  background: #3a3a3a;
+  color: #fff;
+  font-size: 0.95rem;
+}
+.mod-input:focus, .mod-textarea:focus, .mod-select:focus {
+  outline: 2px solid #646cff;
+  border-color: #646cff;
+}
+.mod-textarea { resize: vertical; }
+
+.mod-row-clickable {
+  cursor: pointer;
+}
+
+.mod-row-clickable:hover {
+  background: #333;
+}
+
+
+.mod-delete-btn {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 1rem;
+  line-height: 1;
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+}
+
+.mod-delete-btn:hover {
+  background: #444;
+}
+
+.mod-input.locked {
+  background-color: #3a3a3a;     
+  color: #aaa;                   
+  border-color: #555;            
+  cursor: not-allowed;          
+  opacity: 0.7;                 
+}

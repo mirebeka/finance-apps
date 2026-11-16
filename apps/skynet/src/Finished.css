@@ -1,0 +1,253 @@
+.finished-container {
+  color: white;
+  min-height: 100vh;
+  box-sizing: border-box;
+  width: 100%;
+  overflow-x: auto;
+  padding: 0.8rem;
+}
+
+.finished-container h2 {
+  margin: 0 0 0.7rem 0;
+  color: #000;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.finished-content {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.finished-card {
+  flex: 1;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.35);
+}
+
+.finished-table-wrap {
+  background: #2c2c2c;
+  border-radius: 0.9rem;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.28);
+}
+
+.finished-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.82rem;
+  background-color: #2c2c2c;
+}
+
+.finished-table th,
+.finished-table td {
+  text-align: left;
+  padding: 0.42rem 0.55rem;
+  border-bottom: 0.06rem solid #3b3b3b;
+  border-right: none;
+  border-left: none;
+  border-top: none;
+  white-space: inherit;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  line-height: 1.1;
+  background-color: transparent;
+  color: #fff;
+  vertical-align: middle;
+}
+.finished-table th {
+  background: #2f2f2f;
+  font-weight: 700;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+.finished-table tbody tr {
+  background: #2c2c2c;
+}
+
+.finished-table tbody tr:hover {
+  background: #353535;
+}
+
+.finished-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.finished-chart-card {
+  width: 320px;
+  min-width: 320px;
+  border-radius: 1rem;
+  background-color: #2c2c2c;
+  padding: 1rem;
+
+}
+
+.finished-chart-card h3 {
+  margin: 0 0 0.8rem 0;
+  font-size: 1rem;
+  color: #fff;
+}
+
+/* 1. Type */
+.finished-table th:nth-child(1),
+.finished-table td:nth-child(1) {
+  width: 55px;
+  text-align: center;
+}
+
+/* 2. Modified By */
+.finished-table th:nth-child(2),
+.finished-table td:nth-child(2) {
+  width: 140px;
+}
+
+/* 3. ID */
+.finished-table th:nth-child(3),
+.finished-table td:nth-child(3) {
+  width: 50px;
+}
+
+/* 4. Title */
+.finished-table th:nth-child(4),
+.finished-table td:nth-child(4) {
+  width: 220px;
+}
+
+/* 5. Short Description */
+.finished-table th:nth-child(5),
+.finished-table td:nth-child(5) {
+  max-width: 170px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.finished-table td:nth-child(5) {
+  white-space: normal;
+  overflow: visible;
+  text-overflow: unset;
+  max-width: 170px;
+}
+
+.desc-collapsed span {
+  display: inline;
+}
+
+.desc-expanded span {
+  display: block;
+  white-space: normal;
+  overflow: visible;
+}
+
+/* 6. Due Date */
+.finished-table th:nth-child(6),
+.finished-table td:nth-child(6) {
+  width: 110px;
+}
+
+/* 7. Actual Go Live Date */
+.finished-table th:nth-child(7),
+.finished-table td:nth-child(7) {
+  width: 130px;
+}
+
+/* 8. Deadline Indicator */
+.finished-table th:nth-child(8),
+.finished-table td:nth-child(8) {
+  width: 320px;
+}
+
+.average-finish-box {
+  margin-top: 22px;
+  color: white;
+}
+
+.average-finish-box h3 {
+  font-size: 1rem;
+  margin-bottom: 12px;
+}
+
+.average-finish-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 10px;
+  margin-bottom: 6px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+}
+
+.average-finish-row.on-time {
+  background: rgba(67, 160, 71, 0.22);
+}
+
+.average-finish-row.late {
+  background: rgba(239, 83, 80, 0.22);
+}
+
+.average-finish-row.on-time strong {
+  color: #43a047;
+}
+
+.average-finish-row.late strong {
+  color: #ef5350;
+}
+
+.filter-row th {
+  background: #252525;
+  padding: 0.3rem 0.45rem;
+}
+
+.clear-filters-btn {
+  border: 1px solid #4b4b4b;
+  background: #1f1f1f;
+  color: white;
+  padding: 0.38rem 0.7rem;
+  border-radius: 0.45rem;
+  cursor: pointer;
+  font-size: 0.72rem;
+  font-weight: 700;
+  transition: 0.15s ease;
+}
+
+.clear-filters-btn:hover {
+  background: #504f4f;
+}
+
+
+.show-more-btn {
+  display: block;
+  margin: 4px auto 0 auto;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: #6984be;
+  font-size: 0.75rem;
+  font-weight: 700;
+  cursor: pointer;
+  text-align: center;
+}
+
+.show-more-btn:hover {
+  text-decoration: underline;
+}
+
+
+.title-filter-input {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #444;
+  border-radius: 0.35rem;
+  background: #1f1f1f;
+  color: white;
+  padding: 0.25rem 0.35rem;
+  font-size: 0.7rem;
+  outline: none;
+}
+
+.title-filter-input:focus {
+  border-color: #5d6df6;
+  background: #242424;
+}

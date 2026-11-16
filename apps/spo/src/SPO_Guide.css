@@ -1,0 +1,71 @@
+
+.spo-guide-container {
+  background-color: #0d1a3a;
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding-top: 60px;
+}
+
+.spo-guide-container h1{
+    color:white;
+}
+
+.spo-guide-box {
+  background-color: #ffffff;
+  width: 90%;
+  max-width: 1100px;
+
+  border-radius: 24px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+
+  padding: 60px 80px;
+  box-sizing: border-box;
+
+  text-align: left;
+}
+
+
+.spo-legend-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 12px 14px;
+  border: 1px solid #0d1a3a1a;
+  border-radius: 14px;
+  margin-bottom: 12px;
+  background: #ffffff;
+}
+
+.spo-legend-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  margin-top: 0.45rem;
+  flex: 0 0 14px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+}
+
+
+.dot-green { background: #2e7d32; }
+.dot-yellow { background: #f9a825; }
+.dot-red { background: #d32f2f; }
+.dot-grey { background: #8b8888; }
+
+
+.spo-legend-label {
+  font-weight: 700;
+  color: #0d1a3a;
+  line-height: 1.1;
+}
+
+.spo-legend-desc {
+  margin-top: 4px;
+  color: #2b2b2b;
+  opacity: 0.9;
+  line-height: 1.35;
+  font-size: 15px;
+}

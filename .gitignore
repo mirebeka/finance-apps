@@ -1,0 +1,33 @@
+# dependencies
+node_modules/
+
+# environment & secrets - never commit these
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+*-key.json
+*credentials*.json
+service-account*.json
+
+# build output
+build/
+dist/
+coverage/
+
+# logs & generated seed output
+*.log
+npm-debug.log*
+backend/db/seed/out/
+backend/storage/sop/*
+
+# OS / editor
+.DS_Store
+.vscode/
+.idea/
+
+# local tooling / editor assistants
+.claude/
+CLAUDE.md
+.npmrc

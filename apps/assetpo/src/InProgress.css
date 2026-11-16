@@ -1,0 +1,63 @@
+.assetpo-layout .in-progress-filters {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  align-items: start;
+  gap: 14px;
+  margin: 24px 0;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.in-progress-filter {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+}
+
+.assetpo-layout
+  .in-progress-filter
+  .assetpo-report-date-dropdown {
+  width:100%;
+  min-width: 0;
+}
+
+.in-progress-filters > p {
+  grid-column: 1 / -1;
+}
+
+.in-progress-summary {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 8px 24px;
+  margin-bottom: 16px;
+}
+
+.in-progress-filter input[type="date"] {
+  color-scheme: light;
+  font-family: inherit;
+}
+
+.in-progress-page .in-progress-details-title {
+  margin: 24px 0 0;
+  font-size: 18px;
+}
+
+@media (max-width: 1400px) {
+  .assetpo-layout .in-progress-filters {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 900px) {
+  .assetpo-layout .in-progress-filters {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .assetpo-layout .in-progress-filters {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

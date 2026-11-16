@@ -1,0 +1,362 @@
+/* APP.CSS */
+.app-container{
+  display:flex;   /* ket reszre osztja az oldalt: sidebar + tartalom*/
+  height: 100vh;
+  width:auto;
+  background-color: #c4c0c0;
+  overflow-x: hidden;
+  overflow-y: hidden;
+
+
+}
+
+.sidebar {
+  width: 13rem;
+  height: auto;
+  flex-shrink: 0; 
+  background-color: #131446;
+  color: white;
+  padding-left: 0.8rem;
+  display: flex;
+  flex-direction:column;   /* oszlopszeru elrendezes*/
+  align-items: center;      /*fuggolegesen kozepre rendezes*/
+  font-family:Arial, sans-serif;
+}
+
+.sidebar a {
+  text-decoration: none;
+}
+
+
+.logo-container {
+  margin-top: 2rem;
+  margin-left: 1rem;
+}
+
+.logo {
+  width: 10rem;
+  margin-left: -1rem;
+  height: auto;
+  object-fit: contain;
+  filter: brightness(0) invert(1)   /* feheret csinal a logobol*/
+}
+
+.skynet-logo-container {
+  margin-top: 0.1rem;
+}
+
+.skynet_logo{
+  width: 4rem;
+  height: auto;
+  object-fit: contain;
+  margin-bottom: -1.2rem;
+  filter: brightness(0) invert(1)   /* feheret csinal a logobol*/
+}
+
+.menu-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;  
+  width: 100%;
+  flex: 1;
+  justify-content: center;    /* vizszintesen kozepre rendezes*/
+  
+}
+
+.menu-button{
+  background-color: #272e57;
+  color: white;
+  border: none;
+  padding: 0.8rem 0.8rem;
+  border-radius: 2rem;
+  cursor: pointer;
+  width: 80%;
+  text-align: center;
+  font-weight: 400;
+  font-size: 1rem;
+  font-family:Arial, sans-serif;
+
+  
+
+
+}
+
+.menu-button:hover {
+  background-color: #555;
+}
+
+.menu-button.active  {
+  background: #5865f2;        
+  color: #fff;
+}
+
+.content{
+  flex-grow: 1;  
+  box-sizing: border-box;
+}
+
+.skynet-footer{
+  font-weight: bold;
+  font-size: 1.3rem;
+  margin-bottom: 0.7rem;
+}
+/* END OF APP.CSS */
+
+
+.form-container {
+  height: 100%;
+  min-height: 0;
+  box-sizing: border-box;
+  display: flex;
+  padding: 2rem;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem 2rem;
+  width: min(34rem, 90vw);
+  background-color: #2c2c2c;
+  padding: 1.25rem;
+  border-radius: 1rem;
+  box-shadow: 0 0.25rem 0.75rem rgba(0,0,0,0.5);
+  width: min(40rem, 80vw);
+
+}
+
+.form label {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  font-weight: 500;
+  font-size: 0.92rem;
+}
+
+.label-text {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  width: 100%;
+  font-family:Arial, sans-serif;
+}
+
+
+.form input,
+.form textarea {
+  margin-top: 0.35rem;
+  border-radius: 0.5rem;
+  border: none;
+  background-color: #4e4e4e;
+  color: white;
+  font-size: 0.95rem;
+  padding: 0.42rem 0.6rem;
+  min-height: 1.3rem;
+  resize: vertical;
+}
+
+.form textarea {
+  min-height: 3.1rem;
+  max-width: 100%;
+}
+
+.checkbox {
+  display: flex;
+  flex-direction: column;     
+  align-items: center;
+  gap: 0.5rem;  
+}
+
+.checkbox input {
+  width: 3rem;
+  height: 1.5rem;
+}
+
+.checkbox-group {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  grid-column: 1 / -1;
+  margin-top: 0.1rem;
+  flex-wrap: wrap;
+}
+
+.form-bottom-row {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  margin-top: -0.1rem;
+}
+
+.required-note {
+  justify-self: start;
+  color: rgba(255, 0, 0, 0.808);
+  font-size: 0.92rem;
+  margin-top: 0.2rem;
+}
+
+.required {
+  color: rgba(255, 0, 0, 0.808);     
+  font-weight: bold;
+}
+
+.required::after {
+  content: '*';
+  color: rgba(255, 0, 0, 0.808);
+  font-size: 1rem;
+}
+
+.form-footer {
+  display: flex;
+  justify-content: flex-end; 
+  margin-top: 3.5rem;
+  margin-right: 7rem;
+}
+
+.add-button {
+  justify-self: center;
+  padding: 0.1rem 3rem;
+  height: 3rem;
+  background-color: #646cff;
+  color: white;
+  font-size: 1.3rem;
+  border: none;
+  border-radius: 1.3rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.add-button:hover {
+  background-color: #4a4fe0;
+}
+.error{
+  border: 1px solid rgba(255, 0, 0, 0.808) !important;
+}
+
+.error-message{
+  color:rgba(255, 0, 0, 0.808);
+  font-weight:400;
+  font-size: 0.9rem;
+  min-height: 1.2rem;
+}
+
+  /* --- Get Next ID row  */
+.id-row {
+  grid-column: 1 / span 2;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.5rem 1rem;
+  background: #232323;
+  border: 1px solid #3a3a3a;
+  border-radius: 0.75rem;
+}
+
+
+.id-label {
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: .2px;
+}
+
+/* kis „pill” az ID-nak ( ID:182)*/ 
+.id-pill {
+  padding: 0.25rem 0.6rem;
+  background: #2b2b2b;
+  border: 1px solid #484848;
+  border-radius: 1rem;
+  font-size: 0.9rem;
+  color: #cfd4ff;
+}
+
+/* small icon button for refresh */
+.icon-btn {
+  margin-left: auto;           
+  background: transparent;
+  border: 1px solid #3a3a3a;
+  color: #ddd;
+  border-radius: 1rem;
+  padding: 0.5rem 0.8rem;
+  line-height: 1rem;
+  cursor: pointer;
+}
+.icon-btn:hover {
+  background: #303030;
+  color: #fff;
+}
+/* Two columns: form on the left, flyout on the right */
+.form-with-flyout {
+  display: flex;
+  column-gap: 2rem;
+  align-items: flex-start;
+  margin: auto;
+  flex-shrink: 0;
+}
+
+/*  WISHLIST FLYOUT JOBB OLDALON */
+.wishlist-flyout {
+  position:relative;
+  background: #232323;
+  border: 1px solid #3a3a3a;
+  border-radius: 1rem;
+  padding: 0.75rem;
+  width: 20rem;
+}
+
+.flyout-label {
+  display: block;
+  font-size: 1.2rem;
+  color: #cfd4ff;
+  margin-bottom: 0.5rem;
+}
+
+/* Developer multiselect */
+.dev-select__control {
+  max-height: 5rem;        
+  overflow-y: auto;
+  align-items: flex-start;  
+}
+
+.statistics-button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  cursor: pointer;
+}
+
+
+.statistics-arrow {
+  position:absolute;
+  font-size: 0.8rem;
+  line-height: 1;
+  transition: transform 0.2s ease;
+  right: 2rem; 
+}
+
+.statistics-arrow.open {
+  transform: rotate(180deg);
+}
+
+.statistics-slot {
+  height: 120px; 
+  position: relative;
+}
+
+.statistics-extra {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+
+.statistics-extra.open {
+  opacity: 1;
+  pointer-events: auto;
+}

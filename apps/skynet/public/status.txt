@@ -1,0 +1,7 @@
+1 - Initiation/Planning
+2 - Scripting
+3 - Testing
+4 - Active
+R - Retired
+E - To be fixed
+0 - On Hold

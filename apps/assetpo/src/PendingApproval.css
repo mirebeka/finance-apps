@@ -1,0 +1,113 @@
+.assetpo-table-wrapper {
+  margin-top: 20px;
+  overflow-x: auto;
+}
+
+.assetpo-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 13px;
+}
+
+.assetpo-table th,
+.assetpo-table td {
+  padding: 12px;
+  border-bottom: 1px solid #e2e8f0;
+  vertical-align: top;
+}
+
+.assetpo-table th {
+  background-color: #eef3fa;
+}
+
+.assetpo-table tbody tr:hover {
+  background-color: #f8fafc;
+}
+
+.assetpo-layout .pending-approval-filters {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  align-items: start;
+  gap: 16px;
+  margin: 24px 0;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.pending-approval-filter {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+}
+
+.assetpo-layout
+  .pending-approval-filter
+  .assetpo-report-date-dropdown {
+  width:100%;
+  min-width: 0;
+}
+
+.pending-approval-filters > p {
+  grid-column: 1 / -1;
+}
+
+.pending-approval-summary {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 8px 24px;
+  margin-bottom: 16px;
+}
+
+.pending-approval-page .assetpo-table-wrapper {
+  margin-top: 20px;
+  overflow-x: auto;
+}
+
+.pending-approval-page .assetpo-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 13px;
+}
+
+.pending-approval-page .assetpo-table th,
+.pending-approval-page .assetpo-table td {
+  padding: 12px;
+  border-bottom: 1px solid #e2e8f0;
+  vertical-align: top;
+}
+
+.pending-approval-page .assetpo-table th {
+  background-color: #eef3fa;
+}
+
+.pending-approval-page .assetpo-table tbody tr:hover {
+  background-color: #f8fafc;
+}
+
+
+.pending-approval-filter input[type="date"] {
+  color-scheme: light;
+  font-family: inherit;
+}
+
+@media (max-width: 1400px) {
+  .assetpo-layout .pending-approval-filters {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 900px) {
+  .assetpo-layout .pending-approval-filters {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .assetpo-layout .pending-approval-filters {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

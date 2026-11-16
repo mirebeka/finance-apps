@@ -1,0 +1,9 @@
+.brand-wordmark {
+  display: inline-block;
+  height: auto !important;
+  width: auto !important;
+  font-weight: 800;
+  font-size: 1.35rem;
+  letter-spacing: 0.04em;
+  color: #1f2a44;
+}

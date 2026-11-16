@@ -1,0 +1,16 @@
+{
+  "name": "finance-apps",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Three finance-operations web apps (SPO, SKYNET, Asset PO Tracker) on a shared Express + BigQuery backend. All data is synthetic.",
+  "scripts": {
+    "install:all": "npm install --prefix backend && npm install --prefix apps/spo && npm install --prefix apps/skynet && npm install --prefix apps/assetpo",
+    "db:setup": "npm run db:setup --prefix backend",
+    "db:seed": "npm run db:seed --prefix backend",
+    "db:reset": "npm run db:reset --prefix backend",
+    "start:backend": "npm start --prefix backend",
+    "start:spo": "npm start --prefix apps/spo",
+    "start:skynet": "npm start --prefix apps/skynet",
+    "start:assetpo": "npm start --prefix apps/assetpo"
+  }
+}

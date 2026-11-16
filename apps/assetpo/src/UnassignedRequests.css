@@ -1,0 +1,103 @@
+.assetpo-layout .unassigned-requests-filters {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  align-items: start;
+  gap: 16px;
+  margin: 24px 0;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.unassigned-requests-filter {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+}
+
+.assetpo-layout
+  .unassigned-requests-filter
+  .assetpo-report-date-dropdown {
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.unassigned-requests-filters > p {
+  grid-column: 1 / -1;
+}
+
+.unassigned-requests-summary {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 8px 24px;
+  margin-bottom: 16px;
+}
+
+/* Keep the table scrollable inside the page at smaller widths. */
+.unassigned-requests-page .assetpo-table-wrapper {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.unassigned-requests-page .assetpo-table {
+  table-layout: auto;
+  min-width: 1120px;
+}
+
+/* Let longer fields share the available space. */
+.unassigned-requests-page .assetpo-table th:nth-child(1) {
+  width: 22%;
+}
+
+.unassigned-requests-page .assetpo-table th:nth-child(4),
+.unassigned-requests-page .assetpo-table th:nth-child(7),
+.unassigned-requests-page .assetpo-table th:nth-child(8) {
+  width: 18%;
+}
+
+.unassigned-requests-page .assetpo-table th:nth-child(5) {
+  width: 12%;
+}
+
+.unassigned-requests-page .assetpo-table th:nth-child(6) {
+  width: 9%;
+}
+
+/* Status, Date Submitted and Aging (days) take their natural width. */
+.unassigned-requests-page .assetpo-table th:is(:nth-child(2), :nth-child(3), :nth-child(9)) {
+  width: 1%;
+}
+
+.unassigned-requests-page .assetpo-table :is(th, td):is(:nth-child(2), :nth-child(3), :nth-child(9)) {
+  white-space: nowrap;
+  overflow-wrap: normal;
+}
+
+.unassigned-requests-page .assetpo-table :is(th, td):nth-child(9) {
+  text-align: right;
+}
+
+.unassigned-requests-filter input[type="date"] {
+  color-scheme: light;
+  font-family: inherit;
+}
+
+@media (max-width: 1500px) {
+  .assetpo-layout .unassigned-requests-filters {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 1100px) {
+  .assetpo-layout .unassigned-requests-filters {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 650px) {
+  .assetpo-layout .unassigned-requests-filters {
+    grid-template-columns: 1fr;
+  }
+}
